@@ -18,19 +18,13 @@ export class DashboardComponent implements OnInit {
       series: [
         [5, 2, 4, 2, 0.5, 3]
       ]
-    }
-// Create a new line chart object where as first parameter we pass in a selector
-// that is resolving to our chart container element. The Second parameter
-// is the actual data object.
-
-  ngOnInit() {
-    this.service.getNotifications().then(notifications => this.notifications = notifications);
-    new Chartist.Line('.ct-chart', this.data, { showArea: true } );
-    new Chartist.Pie('.ct-chart-pie',
-    {
+  }
+  data2 = {
+      labels: ['Website', 'Amazon', 'Ebay', 'Retail'],
       series: [{
           value: 20,
-          className: 'pieSliceOne'
+          className: 'pieSliceOne',
+          label: 'Internet Sales'
       },
       {
           value: 10,
@@ -44,10 +38,14 @@ export class DashboardComponent implements OnInit {
           value: 40,
           className: 'pieSliceFour'
       }]
-  },
-  {
+  }
+  ngOnInit() {
+    this.service.getNotifications().then(notifications => this.notifications = notifications);
+    new Chartist.Line('.ct-chart', this.data, { showArea: true } );
+    new Chartist.Pie('.ct-chart-pie', this.data2, {
+
       donut: true,
-      donutWidth: 60,
+      donutWidth: 90,
       donutSolid: true,
       startAngle: 270,
       showLabel: true

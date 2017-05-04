@@ -1,9 +1,9 @@
 .ct-series-a .ct-line,
 .ct-series-a .ct-point {
-  stroke: #354F7F;
+  stroke: #E1664C;
 }
 .ct-series-a .ct-area {
-    fill: #354F7F;
+    fill: #E1664C;
 }
 .ct-chart .ct-label {
     color: #000000;
@@ -16,14 +16,14 @@
     font-size: 1.25em;
 }
 .pieSliceOne {
-    fill: #1689DB;
+    fill: #3498DB;
 }
 .pieSliceTwo {
-    fill: #2D83BD;
+    fill: #E1664C;
 }
 .pieSliceThree {
-    fill: #3396E3;
+    fill: #8834DB;
 }
 .pieSliceFour {
-    fill: #457FA6;
+    fill: #71A817;
 }
