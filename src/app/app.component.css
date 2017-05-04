@@ -1,0 +1,6 @@
+nav.navbar-default {
+    border-radius: 0;
+}
+nav.navbar-default ul li {
+    cursor: pointer;
+}

@@ -1,3 +1,31 @@
-<h1>
-  {{title}}
-</h1>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a routerLink="/" class="navbar-brand">SchedulerApp</a>
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+            <ul class="nav navbar-nav navbar-right">
+                <li routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"><a><i class="fa fa-dashboard"></i>&nbsp;Dashboard</a></li>
+                <li routerLink="/messages" routerLinkActive="active"><a><i class="fa fa-envelope"></i>&nbsp;&nbsp;<span class="badge">2</span></a></li>
+                <li routerLink="/contact" routerLinkActive="active"><a><i class="fa fa-gear"></i></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<main>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+                <app-sidebar></app-sidebar>
+            </div>
+            <div class="col-md-9">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</main>

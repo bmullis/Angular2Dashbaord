@@ -1,0 +1,21 @@
+<aside class="sidebar">
+    <div class="bs-component">
+        <ul class="list-group">
+            <li routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="list-group-item">
+                <span class="badge">{{ notificationsLength }}</span><i class="fa fa-dashboard"></i>&nbsp;&nbsp; Dashboard
+            </li>
+            <li routerLink="/messages" routerLinkActive="active" class="list-group-item">
+                <span class="badge">2</span><i class="fa fa-envelope"></i>&nbsp;&nbsp; Messages
+            </li>
+            <li routerLink="/home" routerLinkActive="active" class="list-group-item">
+                <span class="badge"></span><i class="fa fa-user"></i>&nbsp;&nbsp; Profile
+            </li>
+            <li routerLink="/contact" routerLinkActive="active" class="list-group-item">
+                <span class="badge"></span><i class="fa fa-gear"></i>&nbsp;&nbsp; Settings
+            </li>
+            <li class="list-group-item">
+                <span class="badge"></span><i class="fa fa-sign-out"></i>&nbsp;&nbsp; Logout
+            </li>
+        </ul>
+    </div>
+</aside>

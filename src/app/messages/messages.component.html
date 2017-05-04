@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table table-striped table-hover ">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Sender</th>
+            <th>Subject</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody *ngIf="messages">
+          <tr *ngFor="let message of messages" [ngClass]="{ 'info': message.read }" (click)="messageClick(message)">
+            <td>{{ message.id }}</td>
+            <td>{{ message.sender }}</td>
+            <td>{{ message.subject }}</td>
+            <td>{{ message.date }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div *ngIf="messageModalShow" class="modal" style="display:block;">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button (click)="closeModalClick()" type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">{{ modalMessage.subject }}</h4>
+        </div>
+        <div class="modal-body">
+          <p>{{ modalMessage.message }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

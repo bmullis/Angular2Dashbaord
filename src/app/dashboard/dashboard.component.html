@@ -1,0 +1,32 @@
+<div class="row">
+  <div  *ngIf="notifications" class="col-md-12">
+      <div *ngFor="let notification of notifications" [ngClass]="{ 'hide-it': !notification.read }" >
+          <div class="alert alert-dismissible alert-info">
+            <button type="button" class="close" data-dismiss="alert" (click)="closeNotification(notification)">&times;</button>
+            <strong>{{ notification.alert }}</strong> {{ notification.message }}
+          </div>
+      </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">Weekly Report</h3>
+      </div>
+      <div class="panel-body">
+        <div class="ct-chart ct-perfect-fourth"></div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">Sales Breakdown</h3>
+      </div>
+      <div class="panel-body">
+        <div class="ct-chart-pie ct-perfect-fourth"></div>
+      </div>
+    </div>
+  </div>
+</div>
